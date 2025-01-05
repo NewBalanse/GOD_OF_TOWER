@@ -23,7 +23,7 @@ export function useCounterContract() {
             if(!client) return;
 
             const contract = new Counter(
-                Address.parse('kQCXgPsAVKtmsDV_e_fgvxxbSEJQXIvfgzdaoGGg1Jh2Rsqv')
+                Address.parse('UQCXgPsAVKtmsDV_e_fgvxxbSEJQXIvfgzdaoGGg1Jh2Rizg')
             );
 
             return client.open(contract) as OpenedContract<Counter>;
