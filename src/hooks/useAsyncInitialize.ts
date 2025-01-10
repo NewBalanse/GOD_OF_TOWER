@@ -8,7 +8,7 @@ export function useAsyncInitialize<T>(
     useEffect(() => {
         (async() => {
             setState(await func());
-        });
+        })();
     }, deps);
 
     return state;

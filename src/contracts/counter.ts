@@ -9,10 +9,10 @@ import {
 export default class Counter implements Contract {
     static createForDeploy(
         code: Cell, 
-        initalCounterValue: number
+        initialCounterValue: number
     ) {
         const data = beginCell()
-        .storeUint(initalCounterValue, 64)
+        .storeUint(initialCounterValue, 64)
         .endCell();
         const workchain = 0; // deploy to workchain 0
         const address = contractAddress(
@@ -54,6 +54,7 @@ export default class Counter implements Contract {
     }
 
     async getCounter(provider: ContractProvider) {
+        
         const {stack} = await provider.get("counter", []);
         return stack.readBigNumber();
     }

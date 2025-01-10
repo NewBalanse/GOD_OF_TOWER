@@ -5,6 +5,7 @@ import { useTonConnect } from './hooks/useTonConnect';
 
 function App() {
   const {connected} = useTonConnect();
+  console.log(`isConnected ${connected}`);
   const {
     value,
     address,
@@ -15,6 +16,14 @@ function App() {
     <div className='App'>
       <div className='Container'>
         <TonConnectButton/>
+      </div>
+
+      <div>
+        value {value}
+      </div>
+
+      <div>
+        address {address}
       </div>
       
       <div className='Card'>

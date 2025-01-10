@@ -6,6 +6,8 @@ export function useTonConnect(): {
     connected: boolean
 } {
     const [tonConnectUI] = useTonConnectUI();
+    
+
 
     return {
         sender: {
